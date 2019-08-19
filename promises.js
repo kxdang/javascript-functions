@@ -54,5 +54,8 @@ getDataPromise(10)
     return getDataPromise(data);
   })
   .then(data => {
+    return getDataPromise(data);
+  })
+  .then(data => {
     console.log(data);
   });
