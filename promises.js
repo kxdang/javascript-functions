@@ -48,3 +48,11 @@ getDataPromise(2).then(
     console.log(err);
   }
 );
+
+getDataPromise(10)
+  .then(data => {
+    return getDataPromise(data);
+  })
+  .then(data => {
+    console.log(data);
+  });
