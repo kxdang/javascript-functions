@@ -17,8 +17,8 @@ getDataCallback((err, data) => {
 const getDataPromise = data =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      // resolve("This is the promise data");
-      reject("This is my promise error");
+      resolve(`This is my success data: ${data}`);
+      //reject("This is my promise error");
     }, 2000);
   });
 
