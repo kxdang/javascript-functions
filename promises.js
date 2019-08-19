@@ -14,13 +14,17 @@ getDataCallback((err, data) => {
 });
 
 // Promise
+const getDataPromise = data => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // resolve("This is the promise data");
+      reject("This is my promise error");
+    }, 2000);
+  });
+};
+
 //resolve and reject are two arguements we can use, which is similar to the callback if there is an error or if data exists
-const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    // resolve("This is the promise data");
-    reject("This is my promise error");
-  }, 2000);
-});
+const myPromise = getDataPromise(123);
 
 myPromise.then(
   data => {
